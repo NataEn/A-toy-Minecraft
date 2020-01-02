@@ -1,45 +1,49 @@
-body{
-   margin: 0;
+body {
+  margin: 0;
 }
-.welcome{
-    position: fixed;
-    background: rgba(255, 255, 255, 0.9);
-    z-index: 10;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
+.welcome {
+  position: fixed;
+  background: rgba(255, 255, 255, 0.9);
+  z-index: 10;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
 }
 .logo-wrapper {
-    width: 80%;
-    margin: 0 auto;
+  width: 80%;
+  margin: 0 auto;
 }
 .logo-wrapper img {
-    width: 100%;
+  width: 100%;
 }
-.btn{
-    font-family: 'Pacifico', cursive;
+.btn {
+  font-family: "Pacifico", cursive;
 }
-.start{
-    text-align: center;
-    margin-bottom: 50px;
+.start {
+  text-align: center;
+  margin-bottom: 50px;
 }
-.start > button{
-    font-size: x-large;
-    padding: 10px 30px 10px 30px;
+.start > button {
+  font-size: x-large;
+  padding: 10px 30px 10px 30px;
 }
-.game-size{
-    text-align: center;
+.game-size {
+  text-align: center;
 }
-.minecraft-world{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-
-#block{
-    width: 50px;
-    height: 50px;
-    border: 1px solid black;
+.minecraft-world {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
+#block {
+  width: 50px;
+  height: 50px;
+  border: 1px solid black;
+}
+.tool {
+  width: 50px;
+  height: 50px;
+  border: 1px solid black;
+}
