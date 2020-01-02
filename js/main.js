@@ -4,8 +4,12 @@ Minecraft.canvas = [];
 Minecraft.canvasWidth = 1000;
 Minecraft.tools = document.querySelectorAll(".tool");
 Minecraft.minecraftField = document.querySelector(".minecraft-field");
+Minecraft.block = document.querySelectorAll(".block");
+Minecraft.storageBlock = document.querySelectorAll(".block[data-type]");
 
 Minecraft.start = function() {
+  Minecraft.updateStorage();
+  Minecraft.setBlockBackground();
   Minecraft.buttons();
   Minecraft.fillCanvas();
   Minecraft.setTool();
@@ -25,7 +29,7 @@ Minecraft.fillCanvas = function() {
     overflow: "scroll"
   });
 
-  $(".tools-container").css({
+  $(".toolsAndstorage").css({
     width: "200px",
     height: "100vh",
     "background-color": "sandybrown"
@@ -49,15 +53,29 @@ $(document).ready(function() {
 });
 Minecraft.setTool = () => {
   for (let tool of Minecraft.tools) {
-    console.log(tool);
     tool.style.backgroundImage = `url("./img/${tool.id}.png")`;
     tool.style.backgroundSize = "contain";
     tool.addEventListener("click", e => {
-      console.log("you clicked the " + tool.id);
       tool.style.cursor = `url("./img/${tool.id}Cursor.png"),move`;
-      console.log(tool.style.cursor);
       Minecraft.minecraftField.style.cursor = `url("./img/${tool.id}Cursor.png"),move`;
     });
+  }
+};
+Minecraft.setBlockBackground = () => {
+  for (let block of Minecraft.block) {
+    if (block.dataset.type === "cloude") {
+      block.style.background = "white";
+    } else if (block.dataset.type === "sky") {
+      block.style.background = "blue";
+    } else {
+      block.style.backgroundImage = `url("./img/${block.dataset.type}.png")`;
+      block.style.backgroundSize = "cover";
+    }
+  }
+};
+Minecraft.updateStorage = () => {
+  for (let block of Minecraft.storageBlock) {
+    console.log(block);
   }
 };
 Minecraft.start();
