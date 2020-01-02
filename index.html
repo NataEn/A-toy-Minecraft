@@ -1,42 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="./css/style.css">
-    <link href="https://fonts.googleapis.com/css?family=Pacifico&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    
-
 
     <title>2D Minecraft</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <div class="welcome">
-        <div class="logo-wrapper"><img src="http://itc.yananas.com/git/minecraft/images/MinecraftLogo.png"
-                alt="minecraft logo"></div>
-        <div class="start"><button class="btn btn-outline-success start-btn">Start</button></div>
-        <div class="game-size">
-            <button id="btn-size" value="600" class="btn btn-primary small">Small</button>
-            <button id="btn-size" value="1000" class="btn btn-warning medium selected">Medium</button>
-            <button id="btn-size" value="1400" class="btn btn-danger large">Large</button>
-        </div>
+      <div class="logo-wrapper">
+        <img
+          src="http://itc.yananas.com/git/minecraft/images/MinecraftLogo.png"
+          alt="minecraft logo"
+        />
+      </div>
+
+      <div class="start">
+        <button class="btn btn-outline-success start-btn">Start</button>
+      </div>
+      <div class="game-size">
+        <button id="btn-size" value="600" class="btn btn-primary small">
+          Small
+        </button>
+        <button
+          id="btn-size"
+          value="1000"
+          class="btn btn-warning medium selected"
+        >
+          Medium
+        </button>
+        <button id="btn-size" value="1400" class="btn btn-danger large">
+          Large
+        </button>
+      </div>
     </div>
     <div class="minecraft-world">
-        <div class="cart-container"></div>
-        <div class="minecraft-field"></div>
-        <div class="tools-container">
-            <div id="block"></div>
-        </div>
+      <div class="cart-container"></div>
+      <div class="minecraft-field"></div>
+      <div class="tools-container">
+        <div id="axe"></div>
+        <div id="pickaxe"></div>
+        <div id="shovel"></div>
+      </div>
     </div>
 
     <script src="./js/main.js"></script>
-</body>
-
+  </body>
 </html>
