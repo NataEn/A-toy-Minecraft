@@ -1,7 +1,8 @@
-body{
-   margin: 0;
+body {
+    margin: 0;
 }
-.welcome{
+
+.welcome {
     position: fixed;
     background: rgba(255, 255, 255, 0.9);
     z-index: 10;
@@ -10,36 +11,64 @@ body{
     right: 0;
     bottom: 0;
 }
+
 .logo-wrapper {
     width: 80%;
     margin: 0 auto;
 }
+
 .logo-wrapper img {
     width: 100%;
 }
-.btn{
+
+.btn {
     font-family: 'Pacifico', cursive;
 }
-.start{
+
+.start {
     text-align: center;
     margin-bottom: 50px;
 }
-.start > button{
+
+.start>button {
     font-size: x-large;
     padding: 10px 30px 10px 30px;
 }
-.game-size{
+
+.game-size {
     text-align: center;
 }
-.minecraft-world{
+.cart-container{
+    width: 200px;
+    height: 100vh;
+    background-color: sandybrown;
+}
+.tools-container{
+    width: 200px;
+    height: 100vh;
+    background-color: sandybrown; 
+}
+.minecraft-world {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    box-sizing: border-box;
 }
 
-#block{
+#minecraft-field {
+    display: flex;
+    justify-content: center;
+    width: 2000px;
+    height: 100vh;
+    overflow-x: scroll;
+}
+
+.block {
+    background: skyblue;
+    /* border: black 1px solid; */
     width: 50px;
     height: 50px;
-    border: 1px solid black;
+    cursor: pointer;
+    /* float: left; */
 }
 
