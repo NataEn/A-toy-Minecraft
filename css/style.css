@@ -13,12 +13,12 @@ body {
 }
 
 .logo-wrapper {
-    width: 80%;
-    margin: 0 auto;
+  width: 80%;
+  margin: 0 auto;
 }
 
 .logo-wrapper img {
-    width: 100%;
+  width: 100%;
 }
 
 .btn {
@@ -53,6 +53,7 @@ body {
     flex-direction: row;
     justify-content: space-between;
     box-sizing: border-box;
+    background-color: gray;
 }
 
 #minecraft-field {
@@ -65,10 +66,10 @@ body {
 
 .block {
     background: skyblue;
-    /* border: black 1px solid; */
     width: 50px;
     height: 50px;
     cursor: pointer;
-    /* float: left; */
 }
-
+.block:hover{
+    border: white 0.1px solid;
+}

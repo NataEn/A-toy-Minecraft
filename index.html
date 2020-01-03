@@ -19,19 +19,33 @@
 
 <body>
     <div class="welcome">
-        <div class="logo-wrapper"><img src="http://itc.yananas.com/git/minecraft/images/MinecraftLogo.png"
-                alt="minecraft logo"></div>
-        <div class="start"><button class="btn btn-outline-success start-btn">Start</button></div>
+        <div class="logo-wrapper">
+            <img src="http://itc.yananas.com/git/minecraft/images/MinecraftLogo.png" alt="minecraft logo" />
+        </div>
+
+        <div class="start">
+            <button class="btn btn-outline-success start-btn">Start</button>
+        </div>
         <div class="game-size">
-            <button id="btn-size" value="600" class="btn btn-primary small">Small</button>
-            <button id="btn-size" value="1000" class="btn btn-warning medium selected">Medium</button>
-            <button id="btn-size" value="1400" class="btn btn-danger large">Large</button>
+            <button id="btn-size" value="600" class="btn btn-primary small">
+                Small
+            </button>
+            <button id="btn-size" value="1000" class="btn btn-warning medium selected">
+                Medium
+            </button>
+            <button id="btn-size" value="1400" class="btn btn-danger large">
+                Large
+            </button>
         </div>
     </div>
     <div class="minecraft-world">
         <div class="cart-container"></div>
         <div id="minecraft-field"></div>
-        <div class="tools-container"></div>
+        <div class="tools-container">
+            <div id="axe" class="tool"></div>
+            <div id="pickaxe" class="tool"></div>
+            <div id="shovel" class="tool"></div>
+        </div>
     </div>
 
     <script src="./js/main.js"></script>
