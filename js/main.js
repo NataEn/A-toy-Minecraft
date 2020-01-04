@@ -4,10 +4,14 @@ Minecraft.canvas = [];
 Minecraft.canvasWidth = 1000;
 Minecraft.tools = document.querySelectorAll(".tool");
 Minecraft.minecraftField = document.querySelector(".minecraft-field");
+Minecraft.minecraftFieldWrapper = document.querySelector(
+  ".minecraft-field-wrapper"
+);
 Minecraft.block = document.querySelectorAll(".block");
 Minecraft.storageBlock = document.querySelectorAll(".block[data-type]");
 
 Minecraft.start = function() {
+  Minecraft.addField();
   Minecraft.updateStorage();
   Minecraft.setBlockBackground();
   Minecraft.buttons();
@@ -17,20 +21,23 @@ Minecraft.start = function() {
 
 Minecraft.fillCanvas = function() {
   $(".cart-container").css({
-    width: "200px",
+    width: "20vw",
     height: "100vh",
     "background-color": "sandybrown"
   });
   $(".minecraft-field").css({
-    width: `${Minecraft.canvasWidth}px`,
-    height: "100vh",
+    "background-color": "skyblue"
+  });
+  $(".minecraft-field-wrapper").css({
+    width: "80vw",
+    height: "max-content",
     "background-color": "skyblue",
-    float: "left",
-    overflow: "scroll"
+    overflowX: "scroll",
+    overflowY: "initial"
   });
 
   $(".toolsAndstorage").css({
-    width: "200px",
+    width: "20vw",
     height: "100vh",
     "background-color": "sandybrown"
   });
@@ -76,6 +83,56 @@ Minecraft.setBlockBackground = () => {
 Minecraft.updateStorage = () => {
   for (let block of Minecraft.storageBlock) {
     console.log(block);
+  }
+};
+Minecraft.addField = (fieldSize = Minecraft.canvasWidth) => {
+  let field = Minecraft.minecraftField;
+  let numOfleaves = 5;
+  let numOfpabbles = 5;
+  let numOfcloudes = 5;
+  let numOfWood = 5;
+  for (let i = 0; i < 10; i++) {
+    if (numOfleaves) {
+      for (let i = 0; i < numOfleaves; i++, numOfleaves--) {
+        let block = document.createElement("div");
+        block.setAttribute("class", "block");
+        block.setAttribute("data-type", "leaves");
+        block.style.backgroundImage = `url("./img/${block.dataset.type}.png")`;
+        field.appendChild(block);
+      }
+    }
+    if (numOfpabbles) {
+      for (let i = 0; i < numOfpabbles; i++, numOfpabbles--) {
+        let block = document.createElement("div");
+        block.setAttribute("class", "block");
+        block.setAttribute("data-type", "pabbles");
+        block.style.backgroundImage = `url("./img/${block.dataset.type}.png")`;
+        field.appendChild(block);
+      }
+    }
+    if (numOfcloudes) {
+      for (let i = 0; i < numOfcloudes; i++, numOfcloudes--) {
+        let block = document.createElement("div");
+        block.setAttribute("class", "block");
+        block.setAttribute("data-type", "cloudes");
+        block.style.background = "white";
+        field.appendChild(block);
+      }
+    }
+    if (numOfWood) {
+      for (let i = 0; i < numOfWood; i++, numOfWood--) {
+        let block = document.createElement("div");
+        block.setAttribute("class", "block");
+        block.setAttribute("data-type", "wood");
+        block.style.backgroundImage = `url("./img/${block.dataset.type}.png")`;
+        field.appendChild(block);
+      }
+    } else {
+      let block = document.createElement("div");
+      block.setAttribute("class", "block");
+      block.setAttribute("data-type", "wood");
+      field.appendChild(block);
+    }
   }
 };
 Minecraft.start();

@@ -1,5 +1,9 @@
+* {
+  box-sizing: border-box;
+}
 body {
-  margin: 0;
+  margin: 0 auto;
+  padding: 0;
 }
 .welcome {
   position: fixed;
@@ -37,16 +41,19 @@ body {
   justify-content: space-between;
 }
 
-#block {
+/* #block {
   width: 50px;
   height: 50px;
   border: 1px solid black;
-}
+} */
 .tool,
-#storage div {
+#storage div,
+.block,
+.minecraft-field .block {
   width: 50px;
   height: 50px;
   border: 1px solid black;
+  display: inline-block;
 }
 .block {
   display: flex;
