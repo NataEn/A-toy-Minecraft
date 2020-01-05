@@ -30,8 +30,9 @@ Minecraft.fillCanvas = function () {
             row[i][j].classList.add('block');
             temp.appendChild(row[i][j]);
 
-            //CLICK LISTENER FOR ADDING ELEMENTS INTO THE MINECRAFT-FIELD
+            //ADDING CLICK LISTENERS FOR ADDING ELEMENTS INTO THE MINECRAFT-FIELD
             row[i][j].addEventListener('click', function () {
+                //GET CURRENT ELEMENT CURSOR
                 let urlCur = $('#minecraft-field').css('cursor');
                 let currentCursor = urlCur.split('/')[4].split('"')[0];
                 
@@ -221,6 +222,17 @@ Minecraft.fillCanvas = function () {
     });
     let block = $("div");
 };
+// Minecraft.lavaCreator = function(){
+//     for (let i = 0; i < row.length; i++) {
+//         console.log(row[i].length);
+//         for (let j = row[i].length - 1; j < row[i].length; j++) {
+//             row[i][j].style.backgroundImage = "url('./img/lava.png')";
+//             row[i][j].style.backgroundSize = "50px";
+//             row[i][j].setAttribute('data-block', 'lava');
+//             row[i][j].addEventListener('click', blockRemover);
+//         }
+//     }
+// }
 Minecraft.buttons = function () {
     $('.game-size .btn').click(function () {
         Minecraft.canvasWidth = $(this).val();
