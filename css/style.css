@@ -5,61 +5,125 @@ body {
   margin: 0 auto;
   padding: 0;
 }
+
 .welcome {
-  position: fixed;
-  background: rgba(255, 255, 255, 0.9);
-  z-index: 10;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-}
-.logo-wrapper {
-  width: 80%;
-  margin: 0 auto;
-}
-.logo-wrapper img {
-  width: 100%;
-}
-.btn {
-  font-family: "Pacifico", cursive;
-}
-.start {
-  text-align: center;
-  margin-bottom: 50px;
-}
-.start > button {
-  font-size: x-large;
-  padding: 10px 30px 10px 30px;
-}
-.game-size {
-  text-align: center;
-}
-.minecraft-world {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    /* background: rgba(255, 255, 255, 0.8); */
+    background-image: url('../img/minecraftBG.jpg');
+    background-size: cover;
+    background-position: center;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
 }
 
-/* #block {
-  width: 50px;
-  height: 50px;
-  border: 1px solid black;
-} */
+.logo-wrapper {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.logo-wrapper img {
+    width: 100%;
+}
+
+.btn {
+    font-family: 'Pacifico', cursive;
+}
+
+.start {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.start>button {
+    font-size: x-large;
+    padding: 10px 30px 10px 30px;
+}
+
+.game-size {
+    text-align: center;
+}
+
+.storage-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 100vh;
+    background-image: url('../img/sidebarBG.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.tools-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url('../img/sidebarBG.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+
 .tool,
 #storage div,
 .block,
-.minecraft-field .block {
+.block {
   width: 50px;
   height: 50px;
   border: 1px solid black;
   display: inline-block;
+.minecraft-world {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    box-sizing: border-box;
+    background-color: wheat;
 }
+
+#minecraft-field {
+    display: flex;
+    justify-content: center;
+    width: 1500px;
+    height: 100vh;
+    overflow-x: scroll;
+    overflow-y: hidden;
+}
+
 .block {
-  display: flex;
+    background: skyblue;
+    width: 50px;
+    height: 50px;
 }
-.block span {
-  margin: auto;
-  border-radius: 50%;
-  background: white;
+
+.block:hover {
+    border: white 0.1px solid;
+}
+
+.tool {
+    width: 50px;
+    height: 50px;
+    /* border: 1px solid whitesmoke; */
+}
+
+.block-tool {
+    display: flex;
+    width: 50px;
+    height: 50px;
+    border: 1px solid whitesmoke;
+}
+
+.block-tool span {
+    margin: auto;
+    color: black;
+    font-size: x-large;
+    /* border-radius: 50%; */
+    background: transparent;
 }
