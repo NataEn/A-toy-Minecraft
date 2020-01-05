@@ -33,7 +33,7 @@
             <button id="btn-size" value="1000" class="btn btn-warning medium selected">
                 Medium
             </button>
-            <button id="btn-size" value="1400" class="btn btn-danger large">
+            <button id="btn-size" value="2000" class="btn btn-danger large">
                 Large
             </button>
         </div>
@@ -41,17 +41,26 @@
     <div class="minecraft-world">
         <div class="storage-container">
             <div id="storage">
-                <div class="block-tool" data-type="leaves">
-                    <span class="amount">1</span>
+                <div id="leafCursor" class="block-tool" data-type="leaves">
+                    <span class="amount">0</span>
                 </div>
-                <div class="block-tool" data-type="wood">
-                    <span class="amount">1</span>
+                <div id="trunkCursor" class="block-tool" data-type="wood">
+                    <span class="amount">0</span>
                 </div>
-                <div class="block-tool" data-type="pabbles">
-                    <span class="amount">1</span>
+                <div id="soilCursor" class="block-tool" data-type="pabbles">
+                    <span class="amount">0</span>
                 </div>
-                <div class="block-tool" data-type="cloude">
-                    <span class="amount">1</span>
+                <div id="grassCursor" class="block-tool" data-type="grass">
+                    <span class="amount">0</span>
+                </div>
+                <div id="cloudCursor" class="block-tool" data-type="clouds">
+                    <span class="amount">0</span>
+                </div>
+                <div id="lavaCursor" class="block-tool" data-type="lava">
+                    <span class="amount">0</span>
+                </div>
+                <div id="stoneCursor" class="block-tool" data-type="stone">
+                    <span class="amount">0</span>
                 </div>
             </div>
         </div>
@@ -61,6 +70,7 @@
                 <div id="axe" class="tool"></div>
                 <div id="pickaxe" class="tool"></div>
                 <div id="shovel" class="tool"></div>
+                <div id="eraser" class="tool"></div>
             </div>
         </div>
 
