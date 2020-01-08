@@ -13,6 +13,8 @@ Minecraft.start = function () {
 }
 
 Minecraft.tools = document.querySelectorAll(".tool");
+
+
 Minecraft.minecraftField = document.querySelector("#minecraft-field");
 Minecraft.block = document.querySelectorAll(".block-tool");
 Minecraft.storageBlock = document.querySelectorAll(".block-tool[data-type]");
@@ -221,6 +223,7 @@ Minecraft.fillCanvas = function () {
         "background-color": "sandybrown"
     });
     let block = $("div");
+
 };
 // Minecraft.lavaCreator = function(){
 //     for (let i = 0; i < row.length; i++) {
@@ -296,6 +299,7 @@ Minecraft.updateStorage = () => {
     }
 };
 
+
 function blockRemover() {
     let temp = $(this).data("block");
     let clone;
@@ -350,5 +354,6 @@ $(document).ready(function () {
         Minecraft.start();
     })
 });
+
 
 Minecraft.start();
